@@ -11,4 +11,14 @@ public interface MenuService {
 
 	List<Menu> selectMenuByType(Map<String, String> param);
 
+	List<Menu> selectMenuByTypeAndTaste(Map<String, String> param);
+
+	int insertMenu(Menu menu);
+
+	Menu selectOneMenu(int id);
+
+	int updateMenu(Menu menu);
+
+	int deleteMenu(int id);
+
 }

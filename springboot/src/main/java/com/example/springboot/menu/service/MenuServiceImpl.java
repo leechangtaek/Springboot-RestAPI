@@ -25,4 +25,29 @@ public class MenuServiceImpl implements MenuService {
 		return menuDAO.selectMenuByType(param);
 	}
 
+	@Override
+	public List<Menu> selectMenuByTypeAndTaste(Map<String, String> param) {
+		return menuDAO.selectMenuByTypeAndTaste(param);
+	}
+
+	@Override
+	public int insertMenu(Menu menu) {
+		return menuDAO.insertMenu(menu);
+	}
+	@Override
+	public int updateMenu(Menu menu) {
+		return menuDAO.updateMenu(menu);
+	}
+
+	@Override
+	public int deleteMenu(int id) {
+		return menuDAO.deleteMenu(id);
+	}
+
+	@Override
+	public Menu selectOneMenu(int id) {
+		return menuDAO.selectOneMenu(id);
+	}
+
+
 }

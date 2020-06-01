@@ -24,4 +24,28 @@ public class MenuDAOImpl implements MenuDAO {
 	public List<Menu> selectMenuByType(Map<String, String> param) {
 		return sqlSession.selectList("menu.selectMenuByType",param);
 	}
+
+	@Override
+	public List<Menu> selectMenuByTypeAndTaste(Map<String, String> param) {
+		return sqlSession.selectList("menu.selectMenuByTypeAndTaste",param);
+	}
+
+	@Override
+	public int insertMenu(Menu menu) {
+		return sqlSession.insert("menu.insertMenu",menu);
+	}
+	@Override
+	public int updateMenu(Menu menu) {
+		return sqlSession.update("menu.updateMenu", menu);
+	}
+
+	@Override
+	public int deleteMenu(int id) {
+		return sqlSession.delete("menu.deleteMenu", id);
+	}
+
+	@Override
+	public Menu selectOneMenu(int id) {
+		return sqlSession.selectOne("menu.selectOneMenu", id);
+	}
 }
